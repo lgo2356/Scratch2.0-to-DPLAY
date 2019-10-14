@@ -1,0 +1,23 @@
+{
+    "extensionName": "스크래치 2.0 DPLAY PLUS",
+    "extensionPort": 50209,
+    "url": "http://dplay.cc",
+    "blockSpecs": [
+        ["", "%m.pin_state : 아날로그 %m.analog_pin 번핀", "analog_pin_mode", "사용", "0"],
+        ["", "%m.pin_state : 디지털 %m.digital_pin 번핀 / %m.digital_pin_mode 모드", "digital_pin_mode", "사용", "0", "입력"],
+        ["", "%m.left_right DC 모터 상태를 %m.direction", "motor_direction", "왼쪽", "정방향"],
+        ["", "%m.left_right DC모터 속도를 %n (으)로 정하기", "motor_speed_control", "왼쪽", "100"],
+        ["", "서보모터 각도를 %n (도)로 이동", "dplay_plus_servo", "180"],
+        ["", "R(빨강)을 %n G(초록)를 %n B(파랑)를 %n 으로 %m.digital_on_off", "dplay_plus_rgb", "255", "255", "255", "켜기"],
+        ["", "재생하기", "dplay_plus_play"],
+        ["w", "%n 초 동안 녹음하기", "dplay_plus_recording", "3"],
+        ["r", "아날로그 %m.analog_pin 번 센서 값", "analog_read", "0"],
+        ["b", "디지털 %m.digital_pin 번 센서 값", "digital_read", "4"],
+    ],
+    "menus": {
+        "analog_pin": ["0", "1"],
+        "digital_pin": ["4", "5", "13"],
+        "digital_on_off": ["켜기", "끄기"],
+        "left_right": ["왼쪽", "오른쪽"],
+    }
+}

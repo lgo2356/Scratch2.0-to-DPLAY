@@ -1,0 +1,10 @@
+INFO:root:s2a_fm version 1.5    Copyright(C) 2013-14 Alan Yorinks    All Rights Reserved 
+ERROR:root:Could not instantiate PyMata - is your Arduino plugged in?
+Traceback (most recent call last):
+  File "s2a_fm.py", line 76, in s2a_fm
+    firmata = PyMata(com_port, baud_rate=115200)  # pragma: no cover
+  File "site-packages\PyMata\pymata.py", line 139, in __init__
+  File "site-packages\PyMata\pymata_serial.py", line 82, in open
+  File "site-packages\serial\serialwin32.py", line 39, in open
+SerialException: Port must be configured before it can be used.
+DEBUG:root:Exiting s2a_fm

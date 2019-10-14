@@ -1,0 +1,64 @@
+﻿{
+    "extensionName": "스크래치 2.0 DPLAY",
+    "extensionPort": 50209,
+    "url": "http://dplay.cc",
+    "blockSpecs": [
+        ["", "%m.pin_state : 아날로그 %m.analog_pin 번핀", "analog_pin_mode", "사용", "0"],
+        ["", "%m.pin_state : 디지털 %m.digital_pin 번핀 / %m.digital_pin_mode 모드", "digital_pin_mode", "사용", "0", "입력"],
+        ["r", "아날로그 %m.analog_pin 번 센서값", "analog_read", "0"],
+        ["R", "아날로그 %m.analog_pin 값의 범위를 %n ~ %n 에서 %n ~ %n (으)로 바꾼값", "analog_value_change", "0", "0", "1023", "0", "100"],
+        ["b", "디지털 %m.digital_pin 번 센서값", "digital_read", "0"],
+        ["b", "디지털 %m.digital_pin 번 스위치가 %m.switch_pressed", "digital_read_switch", "2", "눌림"],
+        ["b", "디지털 %m.digital_pin 번 기울기센서가 %m.left_right 으로 기울었음", "digital_read_slope", "2", "왼쪽"],
+        ["", "디지털 %m.digital_pin 번 핀 %m.digital_on_off", "digital_pin_on_off", "0", "켜기"],
+        ["", "디지털 %m.analog_write_pin 번 핀을 %n (으)로 정하기", "analog_write", "3", "255"],
+        ["", "디지털 %m.digital_pin LED 상태를 %m.digital_on_off", "LED_control", "13", "켜기"],
+        ["", "%m.left_right DC모터 상태를 %m.direction", "motor_direction", "왼쪽", "정방향"],
+        ["", "%m.left_right DC모터 속도를 %n (으)로 정하기", "motor_speed_control", "왼쪽", "100"],
+        ["w", "디지털 %m.analog_write_pin 번 부저를 %m.scale %m.octave %n 박자로 연주하기", "buzzer", "10", "도", "1", "0.5"],
+        ["", "디지털 %m.analog_write_pin 번 서보모터 각도를 %n (도)로 이동", "servo_motor_control", "9", "180"],
+        ["", "로봇을 %m.forward_reverse 하기", "robot_movement", "전진"],
+        ["w", "로봇을 %n 초 동안 %m.forward_reverse 하기", "robot_movement_timer", "1", "전진"],
+        ["", "%m.left_right 바퀴 속도를 %n (으)로 정하기", "motor_speed_control", "왼쪽", "100"],
+        ["", "오른쪽 바퀴 %n 왼쪽 바퀴 %n (으)로 정하기", "wheel_speed", "100", "100"],
+        ["", "로봇을 정지하기", "robot_stop"],
+        [
+            "",
+            "%m.analog_write_pin 번핀의 신호음 끄기",
+            "tone_off",
+            "0"
+        ],
+    ],
+    "menus": {
+        "analog_pin": ["0", "1", "2", "3", "4", "5"],
+        "digital_pin": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
+        "digital_on_off": ["켜기", "끄기"],
+        "analog_write_pin": ["3", "5", "6", "9", "10", "11"],
+        "left_right": ["left", "오른쪽"],
+        "direction": ["정방향", "역방향", "정지"],
+        "scale": ["도", "도#", "레", "미♭", "미", "파", "파#", "솔", "솔#", "라", "시♭", "시", "무음"],
+        "octave": ["1", "2", "3"],
+        "forward_reverse": ["전진", "후진", "좌회전", "우회전"],
+        "switch_pressed": ["눌림", "안눌림"],
+        "pin_state": [
+            "사용",
+            "미사용"
+        ],
+        "digital_pin_mode": [
+            "입력",
+            "출력",
+            "전류조절",
+            "서보모터",
+            "신호음",
+            "음파탐지"
+        ],
+        "high_low": [
+            "0",
+            "1"
+        ],
+        "off_on": [
+            "끄기",
+            "켜기"
+        ]
+    }
+}

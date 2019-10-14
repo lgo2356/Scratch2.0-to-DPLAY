@@ -1,0 +1,64 @@
+﻿{
+    "extensionName": "Scratch 2.0 DPLAY",
+    "extensionPort": 50209,
+    "url": "https://github.com/MrYsLab/PyMata",
+    "blockSpecs": [
+        ["", "%m.pin_state : analog %m.analog_pin pin", "analog_pin_mode_en", "Use", "0"],
+        ["", "%m.pin_state : digital %m.digital_pin pin. / %m.digital_pin_mode mode", "digital_pin_mode_en", "Use", "0", "input"],
+        ["r", "The value of analog %m.analog_pin pin", "analog_read", "0"],
+        ["R", "Change the range of analog value %m.analog_pin pin from %n ~ %n to %n ~ %n", "analog_value_change", "0", "0", "1023", "0", "100"],
+        ["b", "The value of digital %m.digital_pin pin", "digital_read", "0"],
+        ["b", "The switch of digital %m.digital_pin pin %m.digital_on_off", "digital_read_switch", "2", "on(1)"],
+        ["b", "The tilt sensor of digital %m.digital_pin pin is %m.left_right", "digital_read_slope", "2", "Left"],
+        ["", "Turn %m.digital_on_off pin to %m.digital_pin", "digital_pin_on_off_en", "on(1)", "0"],
+        ["", "Set digital %m.analog_write_pin pin to %n", "analog_write", "0", "255"],
+        ["", "Turn %m.digital_on_off the digital %m.digital_pin LED", "LED_control_en", "on(1)", "13"],
+        ["", "Set %m.left_right DC motor to %m.direction", "motor_direction_en", "Left", "Forward"],
+        ["", "Set the speed of %m.left_right DC motor to %n", "motor_speed_control", "Left", "100"],
+        ["w", "Playing the digital %m.analog_write_pin buzzer in %n %m.scale %m.octave", "buzzer_en", "10", "0.5", "C", "1"],
+        ["", "Turn the digital %m.analog_write_pin servo motor by %n degree", "servo_motor_control", "9", "180"],
+        ["", "Moving the robot %m.forward_reverse", "robot_movement", "Forward"],
+        ["w", "Moving the robot %m.forward_reverse during %n secs", "robot_movement_timer_en", "Forward", "1"],
+        ["", "Set the speed of %m.left_right wheel to %n", "motor_speed_control", "Left", "100"],
+        ["", "Set the speed of right wheel %n and left wheel to %n", "wheel_speed", "100", "100"],
+        ["", "Stop the robot", "robot_stop"],
+        [
+            "",
+            "Turn off the %m.analog_write_pin tone",
+            "tone_off",
+            "3"
+        ],
+    ],
+    "menus": {
+        "analog_pin": ["0", "1", "2", "3", "4", "5"],
+        "digital_pin": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"],
+        "digital_on_off": ["on(1)", "off(0)"],
+        "analog_write_pin": ["3", "5", "6", "9", "10", "11"],
+        "left_right": ["Left", "Right"],
+        "direction": ["Forward", "Backward", "Stop"],
+        "scale": ["C", "C#", "D", "E♭", "E", "F", "F#", "G", "G#", "A", "B♭", "B", "mute"],
+        "octave": ["1", "2", "3"],
+        "forward_reverse": ["Forward", "Backward", "Turn left", "Turn right"],
+        "switch_pressed": ["pressed", "not pressed"],
+        "pin_state": [
+            "Use",
+            "Unuse"
+        ],
+        "digital_pin_mode": [
+            "input",
+            "output",
+            "current regulation",
+            "servo motor",
+            "tone",
+            "tone detection"
+        ],
+        "high_low": [
+            "0",
+            "1"
+        ],
+        "off_on": [
+            "off",
+            "on"
+        ]
+    }
+}
